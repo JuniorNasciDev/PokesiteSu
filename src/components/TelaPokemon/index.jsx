@@ -53,10 +53,10 @@ function TelaPokemon(props) {
         <div className="box-titulo">
           <p className="nome-poke">{props.nome}</p>
           <div className="box-tipos">
-            <div className="tipo principal">
+            <div className={`tipo principal ${props.tipoP}`}>
               <p className="nome-tipo-principal">{props.tipoP}</p>
             </div>
-            <div className="tipo secundario">
+            <div className={`tipo secundario ${props.tipoS}`}>
             <p className="nome-tipo-secundario">{props.tipoS}</p>
             
             </div>
@@ -67,15 +67,15 @@ function TelaPokemon(props) {
         <div className="box-evolution">
           <p className="title-evolution">Evoluções</p>
           <div className="box-btn-evolution">
-            <div className="box-btn-evolution-w box-btn-1">
+            <div onClick={props.funcEvolutionP} className="box-btn-evolution-w box-btn-1">
               <button className={`btn-evolution f-${props.tipoP}`}>
-                <img className="img-btn-evolution" src={`${props.evolutionOneIMG}`} alt="" />
+                <img className="img-btn-evolution evo-1" src={`${props.evolutionOneIMG}`} alt="" />
               </button>
               <p className="title-btn-evolution">{props.evolutionOne}</p>
             </div>
-            <div className="box-btn-evolution-w box-btn-2">
+            <div onClick={props.funcEvolutionS} className="box-btn-evolution-w box-btn-2">
               <button className={`btn-evolution f-${props.tipoP}`}>
-              <img className="img-btn-evolution" src={`${props.evolutionTwoIMG}`} alt="" />
+              <img className="img-btn-evolution evo-2" src={`${props.evolutionTwoIMG}`} alt="" />
               </button>
               <p className="title-btn-evolution">{props.evolutionTwo}</p>
             </div>

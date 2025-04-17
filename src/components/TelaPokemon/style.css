@@ -71,11 +71,13 @@
 .tipo{
     width: 50px;
     height: 50px;
-    background-color: rgba(255, 0, 0, 0.633);
     margin: 1px;
     border-radius: 50%;
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.579);
     position: relative;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .secundario{
@@ -405,3 +407,192 @@
     background-color: white;
     color: black;
 }
+
+
+/* tipos */
+
+.principal.normal {
+    background-color: #b5b58a;
+    background-image: url(../../assets/social.png);
+    background-position: center;
+  }
+  
+  .principal.fire {
+    background-color: #d63426;
+    background-image: url(../../assets/danger.png);
+  }
+  
+  .principal.water {
+    background-color: #2d9cdb;
+    background-image: url(../../assets/drops.png);
+  }
+  
+  .principal.electric {
+    background-color: #f7c600;
+    background-image: url(../../assets/tiporaio.png);
+  }
+  
+  .principal.grass {
+    background-color: #52b743;
+    background-image: url(../../assets/grass.png);
+  }
+  
+  .principal.ice {
+    background-color: #58c4dc;
+    background-image: url(../../assets/snowflake.png);
+  }
+  
+  .principal.fighting {
+    background-color: #d94a2c;
+    background-image: url(../../assets/fist.png);
+  }
+  
+  .principal.poison {
+    background-color: #a24acb;
+    background-image: url(../../assets/poison.png);
+  }
+  
+  .principal.ground {
+    background-color: #c9a04a;
+    background-image: url(../../assets/grounding.png);
+  }
+  
+  .principal.flying {
+    background-color: #a0c2f2;
+    background-image: url(../../assets/dove.png);
+  }
+  
+  .principal.psychic {
+    background-color: #ff4fa3;
+    background-image: url(../../assets/seer.png);
+  }
+  
+  .principal.bug {
+    background-color: #7dbd35;
+    background-image: url(../../assets/bug.png);
+  }
+  
+  .principal.rock {
+    background-color: #b29f75;
+    background-image: url(../../assets/stone.png);
+  }
+  
+  .principal.ghost {
+    background-color: #6e44aa;
+    background-image: url(../../assets/ghost.png);
+  }
+  
+  .principal.dragon {
+    background-color: #4a65e5;
+    background-image: url(../../assets/japan.png);
+  }
+  
+  .principal.dark {
+    background-color: #3d3d3d;
+    background-image: url(../../assets/devil.png);
+  }
+  
+  .principal.steel {
+    background-color: #8fa3b7;
+    background-image: url(../../assets/steel.png);
+  }
+  
+  .principal.fairy {
+    background-color: #f78cd6;
+    background-image: url(../../assets/magic-wand.png);
+  }
+
+
+
+  /* secundarios*/
+
+  .secundario.normal {
+    background-color: #b5b58a;
+    background-image: url(../../assets/social.png);
+  }
+  
+  .secundario.fire {
+    background-color: #d63426;
+    background-image: url(../../assets/danger.png);
+  }
+  
+  .secundario.water {
+    background-color: #2d9cdb;
+    background-image: url(../../assets/drops.png);
+  }
+  
+  .secundario.electric {
+    background-color: #f7c600;
+    background-image: url(../../assets/tiporaio.png);
+  }
+  
+  .secundario.grass {
+    background-color: #52b743;
+    background-image: url(../../assets/grass.png);
+  }
+  
+  .secundario.ice {
+    background-color: #58c4dc;
+    background-image: url(../../assets/snowflake.png);
+  }
+  
+  .secundario.fighting {
+    background-color: #d94a2c;
+    background-image: url(../../assets/fist.png);
+  }
+  
+  .secundario.poison {
+    background-color: #a24acb;
+    background-image: url(../../assets/poison.png);
+  }
+  
+  .secundario.ground {
+    background-color: #c9a04a;
+    background-image: url(../../assets/grounding.png);
+  }
+  
+  .secundario.flying {
+    background-color: #a0c2f2;
+    background-image: url(../../assets/dove.png);
+  }
+  
+  .secundario.psychic {
+    background-color: #ff4fa3;
+    background-image: url(../../assets/seer.png);
+  }
+  
+  .secundario.bug {
+    background-color: #7dbd35;
+    background-image: url(../../assets/bug.png);
+  }
+  
+  .secundario.rock {
+    background-color: #b29f75;
+    background-image: url(../../assets/stone.png);
+  }
+  
+  .secundario.ghost {
+    background-color: #6e44aa;
+    background-image: url(../../assets/ghost.png);
+  }
+  
+  .secundario.dragon {
+    background-color: #4a65e5;
+    background-image: url(../../assets/japan.png);
+  }
+  
+  .secundario.dark {
+    background-color: #3d3d3d;
+    background-image: url(../../assets/devil.png);
+  }
+  
+  .secundario.steel {
+    background-color: #8fa3b7;
+    background-image: url(../../assets/steel.png);
+  }
+  
+  .secundario.fairy {
+    background-color: #f78cd6;
+    background-image: url(../../assets/magic-wand.png);
+  }
+  

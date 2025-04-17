@@ -167,9 +167,57 @@ function Home() {
     return data.habitat ? data.habitat.name : 'desconhecido';
   }
 
-  function teste(nome){
-    console.log(nome)
-  }
+  const carregarPokemonCompleto = async (nome) => {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${nome}`);
+    const pokeSelecionado = await response.json();
+  
+    setNomePoke(pokeSelecionado.name);
+  
+    const descricao = await fetchDescricaoPoke(pokeSelecionado.name);
+    setDescPoke(descricao);
+    setTipoP(pokeSelecionado.types[0]?.type.name || 'desconhecido');
+    setTipoS(pokeSelecionado.types[1]?.type.name || '');
+    setImgPoke(pokeSelecionado.sprites.other['official-artwork'].front_default || pokeSelecionado.sprites.front_default);
+    setHP(pokeSelecionado.stats[0].base_stat);
+    setAtk(pokeSelecionado.stats[1].base_stat);
+    setDef(pokeSelecionado.stats[2].base_stat);
+    setSped(pokeSelecionado.stats[5].base_stat);
+    setExp(pokeSelecionado.base_experience);
+    setPeso(pokeSelecionado.weight);
+    setAltura(pokeSelecionado.height);
+  
+    const evolucoes = await fetchEvolutionChain(pokeSelecionado.name, pokeSelecionado.species.url);
+    setEvolution(evolucoes[0] || 'sem evolução');
+    setEvolution2(evolucoes[1] || 'sem evolução');
+  
+    const imgCard = await fetchCardGame(pokeSelecionado.name);
+    setCardGame(imgCard);
+  
+    const habitat = await fetchHabitat(pokeSelecionado.name);
+    setHabitat(habitat);
+  
+    const imgEvo = await fetchEvolutionIMG(evolucoes[0]);
+    setEvolutionIMG(imgEvo);
+    const imgEvo2 = await fetchEvolutionIMG(evolucoes[1]);
+    setEvolutionIMG2(imgEvo2);
+  };
+
+  const TrocaPokeTela = async (item) => {
+    let pokeDaVez;
+  
+    if (item.target.classList.contains('evo-1')) {
+      if (!evolution) return;
+      pokeDaVez = evolution;
+    } else if (item.target.classList.contains('evo-2')) {
+      if (!evolution2) return;
+      pokeDaVez = evolution2;
+    }
+  
+    if (pokeDaVez) {
+      await carregarPokemonCompleto(pokeDaVez);
+    }
+  };
+  
 
   useEffect(() => {
     const handleClick = async (event) => {
@@ -217,7 +265,7 @@ function Home() {
     return () => {
       document.removeEventListener('click', handleClick);
     };
-  }, [pokemons]);
+  }, [pokemons,nomePoke]);
 
 
   const abrirTela = () => {
@@ -276,6 +324,8 @@ function Home() {
             exp={exp}
             peso={peso}
             altura={altura}
+            funcEvolutionP={TrocaPokeTela}
+            funcEvolutionS={TrocaPokeTela}
           />
         </div>
       </div>
