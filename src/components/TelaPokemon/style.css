@@ -1,598 +1,303 @@
-
-
-.box-tela{
-    width: 106%;
-    background-color: rgba(255, 255, 255, 0.997);
-    position: absolute;
-    top: 0;
-    height: 110%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-sizing: border-box;
-    border: 1px solid black;
-    padding: 0px 74px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: -4%;
-    display: none;
+.box-tela {
+  width: 106%;
+  background-color: rgba(255, 255, 255, 0.997);
+  position: absolute;
+  top: 0;
+  height: 110%;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 0px 74px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: -4%;
+  display: none; /* Corrigido: removida duplicidade */
 }
 
-.fundo{
-    width: 400px;
-    height: 800px;
-    background-color: rgb(231, 231, 143);
-    position: absolute;
+.fundo {
+  width: 400px;
+  height: 800px;
+  background-color: rgb(231, 231, 143);
+  position: absolute;
 }
 
-.tela-1{
-    z-index: 0;
-    right: -150px;
-    top: 20px;
-    rotate: 35deg;
-}
-.tela-2{
-    z-index: 0;
-    right: 120px;
-    top: 250px;
-    rotate: 55deg;
-
+.tela-1, .tela-2 {
+  position: absolute; /* Adicionado */
+  z-index: 0;
 }
 
-.img-poke-p{
-    position: absolute;
-    right: 0;
-    bottom: 100px;
-    z-index: 10;
-    width: 300px;
-    margin-right: 50px;
+.tela-1 {
+  right: -150px;
+  top: 20px;
+  rotate: 35deg;
 }
 
-
-
-.box-infoPoke{
-    width: 50%;
-  
-    height: 100%;    
+.tela-2 {
+  right: 120px;
+  top: 250px;
+  rotate: 55deg;
 }
 
-.box-titulo{
-    display: flex;
-    max-width: 50%;
+.img-poke-p {
+  position: absolute;
+  right: 0;
+  bottom: 100px;
+  z-index: 10;
+  width: 300px;
+  margin-right: 50px;
 }
 
-.box-tipos{
-    display: flex;
-    align-items: flex-end;
-    margin-left: 15px;
-    height: 80px;
+.box-infoPoke {
+  width: 50%;
+  height: 100%;
 }
 
-.tipo{
-    width: 50px;
-    height: 50px;
-    margin: 1px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.579);
-    position: relative;
-    background-size: 70%;
-    background-repeat: no-repeat;
-    background-position: center;
+.box-titulo {
+  display: flex;
+  max-width: 50%;
 }
 
-.secundario{
-    width: 30px;
-    height: 30px;
-    font-size: 10px;
-    margin-left: 10px;
+.box-tipos {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 15px;
+  height: 80px;
 }
 
-.nome-poke{
-    font-size: 72px;
-    font-weight: bold;
-    text-indent: -6px;
+.tipo {
+  width: 50px;
+  height: 50px;
+  margin: 1px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.579);
+  position: relative;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.desc-poke{
-    max-width: 70%;
+.secundario {
+  width: 30px;
+  height: 30px;
+  font-size: 10px;
+  margin-left: 10px;
 }
 
-
-
-.nome-tipo-secundario{
-    position: absolute;
-    top: -16px;
+.nome-poke {
+  font-size: 72px;
+  font-weight: bold;
+  text-indent: -6px;
 }
 
-.nome-tipo-principal{
-    position: absolute;
-    top: -23px;
+.desc-poke {
+  max-width: 70%;
+  background-color: rgba(95, 87, 87, 0.552);
+  padding: 0.2em 1em;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-weight: 400;
 }
 
-.box-evolution{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 40%;
-
+.nome-tipo-secundario {
+  position: absolute;
+  top: -16px;
 }
 
-.box-btn-evolution{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
+.nome-tipo-principal {
+  position: absolute;
+  top: -23px;
 }
 
-.box-btn-evolution-w{
-    width: 45%;
-    
-} 
-
-.btn-evolution{
-    background-color: rgba(255, 255, 0, 0.375);
-    width: 100%;
-    height: 90px;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.352);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.box-evolution {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
 }
 
-.img-btn-evolution{
-    max-width: 100%;
-    max-height: 100%;
+.box-btn-evolution {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
 
-.title-evolution,.title-stats{
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.box-btn-evolution-w {
+  width: 45%;
 }
 
-.title-btn-evolution{
-    text-align: center;
+.btn-evolution {
+  background-color: rgba(255, 255, 0, 0.375);
+  width: 100%;
+  height: 90px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.352);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.box-stats{
-    width: 40%;
+.img-btn-evolution {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.title-stats{
-    text-align: center;
-    margin-bottom: 0px;
-}
-.stats-bar{
-    display: flex;
-    align-items: center;
-    position: relative;
+.title-evolution, .title-stats {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.base-bar{
-    width: 70%;
-    border-radius: 10px;
-    background-color: rgba(128, 128, 128, 0.286);
-    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.453);
-    position: absolute;
-    left: 33px;
+.title-btn-evolution {
+  text-align: center;
 }
 
-.info-bar{
-    width: 90%;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    border-radius: 10px;
-    text-align: center;
+.box-stats {
+  width: 40%;
+  background-color: rgba(95, 87, 87, 0.379);
+  padding: 0.5em;
+  border-radius: 10px;
+  margin: 10px 0px;
+  font-weight: bold;
 }
 
-.info-bar-text{
-    font-size: 10px;
-    color: white;
+.title-stats {
+  text-align: center;
+  margin-bottom: 0px;
 }
 
-.hp-bar{
-    background-color: red;
-    width: 60%;
-}
-.atk-bar{
-    background-color: rgb(223, 171, 30);
-}
-.def-bar{
-    background-color: rgb(32, 163, 224);
-}
-.spd-bar{
-    background-color: rgb(117, 121, 117);
-}
-.exp-bar{
-    background-color: rgb(37, 181, 63);
+.stats-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-.box-info-peso-alt{
-    position: absolute;
-    display: flex;
-    right: 120px;
-    bottom: 50px;
-    z-index: 400;
-    justify-content: space-between;
-    width: 150px;
+.base-bar {
+  width: 70%;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.286);
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.453);
+  position: absolute;
+  left: 33px;
 }
 
-
-
-.box-3dmodel{
-    width: 50%;
-    height: 90%;    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+.info-bar {
+  width: 90%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  text-align: center;
 }
 
-.box-card-3d{
-    height: 85%;
-    margin: auto;
+.info-bar-text {
+  font-size: 10px;
+  color: white;
 }
 
-.img-card-poke{
-    max-width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.545);
+.hp-bar {
+  background-color: red;
+  width: 60%;
+}
+.atk-bar {
+  background-color: rgb(223, 171, 30);
+}
+.def-bar {
+  background-color: rgb(32, 163, 224);
+}
+.spd-bar {
+  background-color: rgb(169, 19, 224);
+}
+.exp-bar {
+  background-color: rgb(37, 181, 63);
 }
 
-.title-cardin-game{
-    font-weight: bold;
-    font-size: 30px;
+.box-info-peso-alt {
+  position: absolute;
+  display: flex;
+  right: 120px;
+  bottom: 30px;
+  z-index: 400;
+  justify-content: space-between;
+  width: 150px;
+  background-color: rgba(88, 87, 95, 0.266);
+  padding: 0.1em 1em;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
-.close-tela{
-    padding: 20px;
-    background-color: orange;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    background: url('../../assets/closeTela.png');
-    background-size: 100%;
+.box-3dmodel {
+  width: 50%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
+.box-card-3d {
+  height: 85%;
+  margin: auto;
+}
+
+.img-card-poke {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.539);
+}
+
+.title-cardin-game {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.close-tela {
+  padding: 20px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: url('../../assets/closeTela.png');
+  background-size: 100%;
+  background-color: orange;
+}
+
+/* Cores por tipo */
 .f-grass {
-    background-color: #A8D08D; /* Tipo Grama (verde suave e fresco) */
+  background-color: #A8D08D;
 }
-
 .f-fire {
-    background-color: #FF8A65; /* Tipo Fogo (laranja suave e quente) */
+  background-color: #FF8A65;
 }
-
 .f-water {
-    background-color: #64B5F6; /* Tipo Água (azul suave e sereno) */
+  background-color: #64B5F6;
 }
-
 .f-electric {
-    background-color: #FFEB3B; /* Tipo Elétrico (amarelo suave e vibrante) */
+  background-color: #FFEB3B;
 }
-
 .f-bug {
-    background-color: #A5D6A7; /* Tipo Inseto (verde claro e agradável) */
+  background-color: #A5D6A7;
 }
-
 .f-ghost {
-    background-color: #9C27B0; /* Tipo Fantasma (roxo suave e místico) */
+  background-color: #9C27B0;
 }
-
 .f-poison {
-    background-color: #BA68C8; /* Tipo Venenoso (roxo suave e intrigante) */
+  background-color: #BA68C8;
 }
-
 .f-fighting {
-    background-color: #FF7043; /* Tipo Lutador (laranja quente e acolhedor) */
+  background-color: #FF7043;
 }
-
 .f-fairy {
-    background-color: #F8BBD0; /* Tipo Fada (rosa suave e doce) */
+  background-color: #F8BBD0;
 }
-
 .f-psychic {
-    background-color: #FF80AB; /* Tipo Psíquico (rosa claro e luminoso) */
+  background-color: #FF80AB;
 }
-
 .f-rock {
-    background-color: #BDBDBD; /* Tipo Rocha (cinza suave e equilibrado) */
+  background-color: #BDBDBD;
 }
-
-.f-ground {
-    background-color: #D7B88C; /* Tipo Terra (marrom suave, parecido com o solo) */
-}
-
-.f-ice {
-    background-color: #81D4FA; /* Tipo Gelo (azul claro suave e frio) */
-}
-
-.f-dragon {
-    background-color: #7986CB; /* Tipo Dragão (azul suave e misterioso) */
-}
-
-.f-dark {
-    background-color: #616161; /* Tipo Sombrio (cinza escuro e profundo) */
-}
-
-.f-steel {
-    background-color: #90A4AE; /* Tipo Aço (cinza claro e metálico) */
-}
-
-.f-normal {
-    background-color: #F1F1F1; /* Tipo Normal (cinza claro, suave e neutro) */
-}
-
-.f-flying {
-    background-color: #BBDEFB; /* Tipo Voador (azul suave e arejado) */
-}
-
-
-/* fundo imagem */
-
-.grassland{
-    background: url(https://images.pexels.com/photos/1574547/pexels-photo-1574547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-size: cover;
-}
-
-
-
-.forest {
-    background: url(https://images.pexels.com/photos/167698/pexels-photo-167698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-size: cover;
-    color: white;
-    background-position: center;
-}
-
-.waters-edge {
-    background: url(https://images.pexels.com/photos/1591370/pexels-photo-1591370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-size: cover;
-    background-position: center;
-    color: rgb(255, 255, 255);
-}
-
-.sea {
-    background: url(https://images.pexels.com/photos/2397651/pexels-photo-2397651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-size: cover;
-}
-
-.cave {
-    background: url(https://images.pexels.com/photos/19160537/pexels-photo-19160537/free-photo-of-sombrio-escuro-rochas-pedras.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-size: cover;
-    color: white;
-}
-
-.mountain {
-    background: url(https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-size: cover;
-    color: white;
-}
-
-.rough-terrain {
-    background: url(https://images.pexels.com/photos/552785/pexels-photo-552785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-size: cover;
-    background-position: top;
-}
-
-.urban {
-    background: url(https://images.pexels.com/photos/31657678/pexels-photo-31657678/free-photo-of-horizonte-do-centro-de-chicago-com-edificios-historicos.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-size: cover;
-    background-position: center;
-}
-
-.rare {
-    background: url(https://images.pexels.com/photos/8601965/pexels-photo-8601965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); /* Um fundo mágico/misterioso */
-    background-size: cover;
-    background-position: center;
-    color: white;
-}
-
-.swamp {
-    background: url(https://images.unsplash.com/photo-1585128792020-3e25e1f85716);
-    background-size: cover;
-}
-
-.field {
-    background: url(https://images.unsplash.com/photo-1509474520651-6efbbca5f27c);
-    background-size: cover;
-}
-
-.desconhecido{
-    background-color: white;
-    color: black;
-}
-
-
-/* tipos */
-
-.principal.normal {
-    background-color: #b5b58a;
-    background-image: url(../../assets/social.png);
-    background-position: center;
-  }
-  
-  .principal.fire {
-    background-color: #d63426;
-    background-image: url(../../assets/danger.png);
-  }
-  
-  .principal.water {
-    background-color: #2d9cdb;
-    background-image: url(../../assets/drops.png);
-  }
-  
-  .principal.electric {
-    background-color: #f7c600;
-    background-image: url(../../assets/tiporaio.png);
-  }
-  
-  .principal.grass {
-    background-color: #52b743;
-    background-image: url(../../assets/grass.png);
-  }
-  
-  .principal.ice {
-    background-color: #58c4dc;
-    background-image: url(../../assets/snowflake.png);
-  }
-  
-  .principal.fighting {
-    background-color: #d94a2c;
-    background-image: url(../../assets/fist.png);
-  }
-  
-  .principal.poison {
-    background-color: #a24acb;
-    background-image: url(../../assets/poison.png);
-  }
-  
-  .principal.ground {
-    background-color: #c9a04a;
-    background-image: url(../../assets/grounding.png);
-  }
-  
-  .principal.flying {
-    background-color: #a0c2f2;
-    background-image: url(../../assets/dove.png);
-  }
-  
-  .principal.psychic {
-    background-color: #ff4fa3;
-    background-image: url(../../assets/seer.png);
-  }
-  
-  .principal.bug {
-    background-color: #7dbd35;
-    background-image: url(../../assets/bug.png);
-  }
-  
-  .principal.rock {
-    background-color: #b29f75;
-    background-image: url(../../assets/stone.png);
-  }
-  
-  .principal.ghost {
-    background-color: #6e44aa;
-    background-image: url(../../assets/ghost.png);
-  }
-  
-  .principal.dragon {
-    background-color: #4a65e5;
-    background-image: url(../../assets/japan.png);
-  }
-  
-  .principal.dark {
-    background-color: #3d3d3d;
-    background-image: url(../../assets/devil.png);
-  }
-  
-  .principal.steel {
-    background-color: #8fa3b7;
-    background-image: url(../../assets/steel.png);
-  }
-  
-  .principal.fairy {
-    background-color: #f78cd6;
-    background-image: url(../../assets/magic-wand.png);
-  }
-
-
-
-  /* secundarios*/
-
-  .secundario.normal {
-    background-color: #b5b58a;
-    background-image: url(../../assets/social.png);
-  }
-  
-  .secundario.fire {
-    background-color: #d63426;
-    background-image: url(../../assets/danger.png);
-  }
-  
-  .secundario.water {
-    background-color: #2d9cdb;
-    background-image: url(../../assets/drops.png);
-  }
-  
-  .secundario.electric {
-    background-color: #f7c600;
-    background-image: url(../../assets/tiporaio.png);
-  }
-  
-  .secundario.grass {
-    background-color: #52b743;
-    background-image: url(../../assets/grass.png);
-  }
-  
-  .secundario.ice {
-    background-color: #58c4dc;
-    background-image: url(../../assets/snowflake.png);
-  }
-  
-  .secundario.fighting {
-    background-color: #d94a2c;
-    background-image: url(../../assets/fist.png);
-  }
-  
-  .secundario.poison {
-    background-color: #a24acb;
-    background-image: url(../../assets/poison.png);
-  }
-  
-  .secundario.ground {
-    background-color: #c9a04a;
-    background-image: url(../../assets/grounding.png);
-  }
-  
-  .secundario.flying {
-    background-color: #a0c2f2;
-    background-image: url(../../assets/dove.png);
-  }
-  
-  .secundario.psychic {
-    background-color: #ff4fa3;
-    background-image: url(../../assets/seer.png);
-  }
-  
-  .secundario.bug {
-    background-color: #7dbd35;
-    background-image: url(../../assets/bug.png);
-  }
-  
-  .secundario.rock {
-    background-color: #b29f75;
-    background-image: url(../../assets/stone.png);
-  }
-  
-  .secundario.ghost {
-    background-color: #6e44aa;
-    background-image: url(../../assets/ghost.png);
-  }
-  
-  .secundario.dragon {
-    background-color: #4a65e5;
-    background-image: url(../../assets/japan.png);
-  }
-  
-  .secundario.dark {
-    background-color: #3d3d3d;
-    background-image: url(../../assets/devil.png);
-  }
-  
-  .secundario.steel {
-    background-color: #8fa3b7;
-    background-image: url(../../assets/steel.png);
-  }
-  
-  .secundario.fairy {
-    background-color: #f78cd6;
-    background-image: url(../../assets/magic-wand.png);
-  }
-  
