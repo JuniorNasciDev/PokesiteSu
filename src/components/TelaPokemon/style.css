@@ -335,5 +335,73 @@
 /* fundo imagem */
 
 .grassland{
-    background-color: red;
+    background: url(https://images.pexels.com/photos/1574547/pexels-photo-1574547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+}
+
+
+
+.forest {
+    background: url(https://images.pexels.com/photos/167698/pexels-photo-167698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    color: white;
+    background-position: center;
+}
+
+.waters-edge {
+    background: url(https://images.pexels.com/photos/1591370/pexels-photo-1591370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+}
+
+.sea {
+    background: url(https://images.pexels.com/photos/2397651/pexels-photo-2397651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+}
+
+.cave {
+    background: url(https://images.pexels.com/photos/19160537/pexels-photo-19160537/free-photo-of-sombrio-escuro-rochas-pedras.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    color: white;
+}
+
+.mountain {
+    background: url(https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    color: white;
+}
+
+.rough-terrain {
+    background: url(https://images.pexels.com/photos/552785/pexels-photo-552785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: top;
+}
+
+.urban {
+    background: url(https://images.pexels.com/photos/31657678/pexels-photo-31657678/free-photo-of-horizonte-do-centro-de-chicago-com-edificios-historicos.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-position: center;
+}
+
+.rare {
+    background: url(https://images.pexels.com/photos/8601965/pexels-photo-8601965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); /* Um fundo mágico/misterioso */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.swamp {
+    background: url(https://images.unsplash.com/photo-1585128792020-3e25e1f85716);
+    background-size: cover;
+}
+
+.field {
+    background: url(https://images.unsplash.com/photo-1509474520651-6efbbca5f27c);
+    background-size: cover;
+}
+
+.desconhecido{
+    background-color: white;
+    color: black;
 }

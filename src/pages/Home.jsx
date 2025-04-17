@@ -18,7 +18,16 @@ function Home() {
   const [evolution, setEvolution] = useState('teste')
   const [evolution2, setEvolution2] = useState('teste')
   const [cardGame, setCardGame] = useState('')
-  const [habitat, setHabitat] = useState('')
+  const [habitat, setHabitat] = useState('none')
+  const [evolutionIMG, setEvolutionIMG] = useState ('teste')
+  const [evolutionIMG2, setEvolutionIMG2] = useState ('teste')
+  const [hp, setHP] = useState ('126');
+  const [atk, setAtk] = useState ('0');
+  const [def, setDef] = useState('0')
+  const [spd, setSped] = useState('0')
+  const [exp, setExp] = useState('0')
+  const [peso, setPeso] = useState('0')
+  const [altura, setAltura] = useState('0')
 
   const proximaPagina = () => setPosicao(prev => prev + 8);
   const paginaAnterior = () => {
@@ -115,6 +124,19 @@ function Home() {
     }
   };
 
+  const fetchEvolutionIMG = async (nome) => {
+    if(nome == undefined){
+      console.log('não existe outra')
+      return 'https://cdn.pixabay.com/photo/2012/04/12/20/12/x-30465_960_720.png'
+    }
+    const url = `https://pokeapi.co/api/v2/pokemon/${nome}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    
+    // Verifique se a chave "sprites" e "front_default" existem
+    return data.sprites.front_default;
+  }
+
   const fetchCardGame = async (nome) => {
     try {
       const response = await fetch(`https://api.pokemontcg.io/v2/cards?q=name:"${nome}"&pageSize=1`, {
@@ -145,6 +167,9 @@ function Home() {
     return data.habitat ? data.habitat.name : 'desconhecido';
   }
 
+  function teste(nome){
+    console.log(nome)
+  }
 
   useEffect(() => {
     const handleClick = async (event) => {
@@ -162,7 +187,16 @@ function Home() {
           setTipoP(pokeSelecionado.types[0]?.type.name || 'desconhecido');
           setTipoS(pokeSelecionado.types[1]?.type.name || '');
           setImgPoke(pokeSelecionado.sprites.other['official-artwork'].front_default || pokeSelecionado.sprites.front_default);
-          
+          setHP(pokeSelecionado.stats[0].base_stat)
+          setAtk(pokeSelecionado.stats[1].base_stat)
+          setDef(pokeSelecionado.stats[2].base_stat)
+          setSped(pokeSelecionado.stats[5].base_stat)
+          setExp(pokeSelecionado.base_experience)
+          setPeso(pokeSelecionado.weight)
+          setAltura(pokeSelecionado.height)
+          console.log(pokeSelecionado)
+
+
           // Buscando as evoluções
           const evolucoes = await fetchEvolutionChain(pokeSelecionado.name, pokeSelecionado.species.url);
           setEvolution(evolucoes[0] || 'sem evolução');
@@ -171,6 +205,10 @@ function Home() {
           setCardGame(imgCard);
           const habitat = await fetchHabitat(pokeSelecionado.name);
           setHabitat(habitat)
+          const imgEvo = await fetchEvolutionIMG(evolucoes[0]);
+          setEvolutionIMG(imgEvo);
+          const imgEvo2 = await fetchEvolutionIMG(evolucoes[1]);
+          setEvolutionIMG2(imgEvo2);
         }
       });
     };
@@ -183,7 +221,6 @@ function Home() {
 
 
   const abrirTela = () => {
-    console.log(habitat)
     const tela = document.querySelector('.box-tela');
     if (tela) tela.style.display = 'flex';
   };
@@ -213,7 +250,7 @@ function Home() {
               img={poke.sprites.other.dream_world.front_default ||  poke.sprites.front_default || poke.sprites.other['official-artwork'].front_default || poke.sprites.other['dream_world'].front_default}
               tipo={poke.types[0].type.name}
               infoPoke={abrirTela}
-              habitat={habitat}
+              
             />
           ))}
           <div className="box-nav">
@@ -227,8 +264,18 @@ function Home() {
             tipoS={tipoS}
             img={imgPoke}
             evolutionOne={evolution}
+            evolutionOneIMG={evolutionIMG}
             evolutionTwo={evolution2}
+            evolutionTwoIMG={evolutionIMG2}
             cardGame = {`${cardGame}`}
+            habita={habitat}
+            hp={hp}
+            atk={atk}
+            def={def}
+            spd={spd}
+            exp={exp}
+            peso={peso}
+            altura={altura}
           />
         </div>
       </div>
