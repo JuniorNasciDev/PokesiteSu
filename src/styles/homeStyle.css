@@ -1,0 +1,58 @@
+.title-home{
+    text-align: center;
+    font-size: 96px;
+    color: #6441A5;
+}
+.text-home{
+    text-align: center;
+    font-size: 24px;
+    color: #6441a583;
+}
+
+.box-home{
+    padding: 0px 175px; 
+    max-width: 1625px;
+    min-width: 400px;
+    margin: auto;
+}
+
+.home-lista-btn{
+    display: flex;
+    list-style: none;
+    margin: 1em 0em;
+    
+}
+
+.box-pokemon-home-teste{
+    border: 1px solid #6441a549;
+    padding: 20px 5%;
+    border-radius: 8px;
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1625px;
+    max-height: 530px;
+    position: relative;
+}
+.pagination{
+    margin: 16px auto;
+    width: fit-content;
+}
+
+.box-nav{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.esquerda{
+    padding: 20px;
+    margin-left: -35px;
+}
+
+.direita{
+    padding: 20px;
+    margin-right: -35px;
+}

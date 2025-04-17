@@ -1,0 +1,28 @@
+
+
+.box-rodape{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    border: 1px solid #6441a565;
+    margin-top: 19px;
+    bottom: 0px;
+    position: absolute;
+}
+
+.lista-rodape{
+    margin-top: -19px;
+    background-color: white;
+    padding: 5px 10px;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+.item-rodape{
+    margin: 0px 16px;
+}
+
+a{
+    text-decoration: none;
+}

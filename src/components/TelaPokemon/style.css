@@ -1,0 +1,339 @@
+
+
+.box-tela{
+    width: 106%;
+    background-color: rgba(255, 255, 255, 0.997);
+    position: absolute;
+    top: 0;
+    height: 110%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 0px 74px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: -4%;
+    display: none;
+}
+
+.fundo{
+    width: 400px;
+    height: 800px;
+    background-color: rgb(231, 231, 143);
+    position: absolute;
+}
+
+.tela-1{
+    z-index: 0;
+    right: -150px;
+    top: 20px;
+    rotate: 35deg;
+}
+.tela-2{
+    z-index: 0;
+    right: 120px;
+    top: 250px;
+    rotate: 55deg;
+
+}
+
+.img-poke-p{
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    z-index: 10;
+    width: 300px;
+    margin-right: 50px;
+}
+
+
+
+.box-infoPoke{
+    width: 50%;
+  
+    height: 100%;    
+}
+
+.box-titulo{
+    display: flex;
+    max-width: 50%;
+}
+
+.box-tipos{
+    display: flex;
+    align-items: flex-end;
+    margin-left: 15px;
+    height: 80px;
+}
+
+.tipo{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 0, 0, 0.633);
+    margin: 1px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.579);
+    position: relative;
+}
+
+.secundario{
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.nome-poke{
+    font-size: 72px;
+    font-weight: bold;
+    text-indent: -6px;
+}
+
+.desc-poke{
+    max-width: 70%;
+}
+
+
+
+.nome-tipo-secundario{
+    position: absolute;
+    top: -16px;
+}
+
+.nome-tipo-principal{
+    position: absolute;
+    top: -23px;
+}
+
+.box-evolution{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 40%;
+
+}
+
+.box-btn-evolution{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.box-btn-evolution-w{
+    width: 45%;
+    
+} 
+
+.btn-evolution{
+    background-color: rgba(255, 255, 0, 0.375);
+    width: 100%;
+    height: 90px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.352);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.img-btn-evolution{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.title-evolution,.title-stats{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.title-btn-evolution{
+    text-align: center;
+}
+
+.box-stats{
+    width: 40%;
+}
+
+.title-stats{
+    text-align: center;
+    margin-bottom: 0px;
+}
+.stats-bar{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.base-bar{
+    width: 70%;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.286);
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.453);
+    position: absolute;
+    left: 33px;
+}
+
+.info-bar{
+    width: 90%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.info-bar-text{
+    font-size: 10px;
+    color: white;
+}
+
+.hp-bar{
+    background-color: red;
+    width: 60%;
+}
+.atk-bar{
+    background-color: rgb(223, 171, 30);
+}
+.def-bar{
+    background-color: rgb(32, 163, 224);
+}
+.spd-bar{
+    background-color: rgb(117, 121, 117);
+}
+.exp-bar{
+    background-color: rgb(37, 181, 63);
+}
+
+.box-info-peso-alt{
+    position: absolute;
+    display: flex;
+    right: 120px;
+    bottom: 50px;
+    z-index: 400;
+    justify-content: space-between;
+    width: 150px;
+}
+
+
+
+.box-3dmodel{
+    width: 50%;
+    height: 90%;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.box-card-3d{
+    height: 85%;
+    margin: auto;
+}
+
+.img-card-poke{
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.545);
+}
+
+.title-cardin-game{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.close-tela{
+    padding: 20px;
+    background-color: orange;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: url('../../assets/closeTela.png');
+    background-size: 100%;
+}
+
+.f-grass {
+    background-color: #A8D08D; /* Tipo Grama (verde suave e fresco) */
+}
+
+.f-fire {
+    background-color: #FF8A65; /* Tipo Fogo (laranja suave e quente) */
+}
+
+.f-water {
+    background-color: #64B5F6; /* Tipo Água (azul suave e sereno) */
+}
+
+.f-electric {
+    background-color: #FFEB3B; /* Tipo Elétrico (amarelo suave e vibrante) */
+}
+
+.f-bug {
+    background-color: #A5D6A7; /* Tipo Inseto (verde claro e agradável) */
+}
+
+.f-ghost {
+    background-color: #9C27B0; /* Tipo Fantasma (roxo suave e místico) */
+}
+
+.f-poison {
+    background-color: #BA68C8; /* Tipo Venenoso (roxo suave e intrigante) */
+}
+
+.f-fighting {
+    background-color: #FF7043; /* Tipo Lutador (laranja quente e acolhedor) */
+}
+
+.f-fairy {
+    background-color: #F8BBD0; /* Tipo Fada (rosa suave e doce) */
+}
+
+.f-psychic {
+    background-color: #FF80AB; /* Tipo Psíquico (rosa claro e luminoso) */
+}
+
+.f-rock {
+    background-color: #BDBDBD; /* Tipo Rocha (cinza suave e equilibrado) */
+}
+
+.f-ground {
+    background-color: #D7B88C; /* Tipo Terra (marrom suave, parecido com o solo) */
+}
+
+.f-ice {
+    background-color: #81D4FA; /* Tipo Gelo (azul claro suave e frio) */
+}
+
+.f-dragon {
+    background-color: #7986CB; /* Tipo Dragão (azul suave e misterioso) */
+}
+
+.f-dark {
+    background-color: #616161; /* Tipo Sombrio (cinza escuro e profundo) */
+}
+
+.f-steel {
+    background-color: #90A4AE; /* Tipo Aço (cinza claro e metálico) */
+}
+
+.f-normal {
+    background-color: #F1F1F1; /* Tipo Normal (cinza claro, suave e neutro) */
+}
+
+.f-flying {
+    background-color: #BBDEFB; /* Tipo Voador (azul suave e arejado) */
+}
+
+
+/* fundo imagem */
+
+.grassland{
+    background-color: red;
+}

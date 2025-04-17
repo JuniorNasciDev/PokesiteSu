@@ -1,0 +1,27 @@
+
+
+.nav-box{
+    width: 100%;
+    padding: 0px 64px;
+    background-color: var(--fundo-navegacao);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+
+}
+
+.box-logo{
+    width: 20%;
+    text-align: center;  
+}
+.logo-nav{
+    width: 12.25rem;
+}
+
+.lista-nav{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    max-width: 500px;
+}

@@ -1,0 +1,337 @@
+.box-card{
+    width: 200px;
+    height: 150px;
+    max-height: 200px;
+    border-radius: 26px;
+    box-shadow: 1px 1px 16px -9px rgba(0, 0, 0, 0.704);
+    position: relative;
+    margin: 4em 1em;
+    background-color: #FFFFB7;
+}
+
+.poke-img{
+    max-width: 50%;
+    max-height: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.box-tipo{
+    position: absolute;
+    top: 0;
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    background-color: #FEE6AC;
+    transform: translate(0px,-10px);
+    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.76);
+    background-image: url(../../assets/tiporaio.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}
+
+.box-card-dentro{
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.box-nome{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.poke-nome{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+/* de acordo com cada tipo o carde muda*/
+
+.box-card.normal {
+    background: linear-gradient(135deg, #cfcfa1, #a8a77a);
+  }
+.box-tipo.normal::after {
+    content: "Normal";
+    position: absolute;
+    top: 100%;
+    padding: 2px;
+    border-radius: 8px;
+    font-size: 12px;
+    opacity: 0;
+    text-align: center;
+  }
+
+.box-tipo.normal:hover::after{
+  opacity: 1;
+}
+  
+  .box-card.water {
+    background: linear-gradient(135deg, #8fd7ff, #2591ef);
+  }
+  .box-card.fire {
+    background: linear-gradient(135deg, #ffa37c, #ff610b);
+  }
+  
+  .box-card.electric {
+    background: linear-gradient(135deg, #fff799, #fbcd13);
+  }
+  
+  .box-card.grass {
+    background: linear-gradient(135deg, #a8f78d, #51d342);
+  }
+  
+  .box-card.ice {
+    background: linear-gradient(135deg, #c4f3f7, #9ae4e8);
+  }
+  
+  .box-card.fighting {
+    background: linear-gradient(135deg, #ff9c8f, #f73100);
+  }
+  
+  .box-card.poison {
+    background: linear-gradient(135deg, #d9a7f4, #b567ce);
+  }
+  
+  .box-card.ground {
+    background: linear-gradient(135deg, #f5e1a4, #e0c068);
+  }
+  
+  .box-card.flying {
+    background: linear-gradient(135deg, #d0caff, #a98ff0);
+  }
+  
+  .box-card.psychic {
+    background: linear-gradient(135deg, #ff9abe, #f85888);
+  }
+  
+  .box-card.bug {
+    background: linear-gradient(135deg, #d0f285, #a6c947);
+  }
+  
+  .box-card.rock {
+    background: linear-gradient(135deg, #e5d4aa, #c9b78d);
+  }
+  
+  .box-card.ghost {
+    background: linear-gradient(135deg, #b4a2d3, #8465ac);
+  }
+  
+  .box-card.dragon {
+    background: linear-gradient(135deg, #a3b5ff, #6f84d4);
+  }
+  
+  .box-card.dark {
+    background: linear-gradient(135deg, #a98d7d, #705746);
+  }
+  
+  .box-card.steel {
+    background: linear-gradient(135deg, #e0e0ff, #b8b8d0);
+  }
+  
+  .box-card.fairy {
+    background: linear-gradient(135deg, #fdd1f0, #f4b3e0);
+  }
+  
+  .box-card.shadow {
+    background: linear-gradient(135deg, #8e8aa9, #5b597c);
+  }
+  
+  .box-card.unknown {
+    background: linear-gradient(135deg, #cccccc, #999999);
+  }
+  
+  /* Para o icone de tipos*/
+
+
+  .box-tipo.normal {
+    background-color: #b5b58a;
+    background-image: url(../../assets/social.png);
+  }
+  
+  .box-tipo.fire {
+    background-color: #d63426;
+    background-image: url(../../assets/danger.png);
+  }
+  
+  .box-tipo.water {
+    background-color: #2d9cdb;
+    background-image: url(../../assets/drops.png);
+  }
+  
+  .box-tipo.electric {
+    background-color: #f7c600;
+    background-image: url(../../assets/tiporaio.png);
+  }
+  
+  .box-tipo.grass {
+    background-color: #52b743;
+    background-image: url(../../assets/grass.png);
+  }
+  
+  .box-tipo.ice {
+    background-color: #58c4dc;
+    background-image: url(../../assets/snowflake.png);
+  }
+  
+  .box-tipo.fighting {
+    background-color: #d94a2c;
+    background-image: url(../../assets/fist.png);
+  }
+  
+  .box-tipo.poison {
+    background-color: #a24acb;
+    background-image: url(../../assets/poison.png);
+  }
+  
+  .box-tipo.ground {
+    background-color: #c9a04a;
+    background-image: url(../../assets/grounding.png);
+  }
+  
+  .box-tipo.flying {
+    background-color: #a0c2f2;
+    background-image: url(../../assets/dove.png);
+  }
+  
+  .box-tipo.psychic {
+    background-color: #ff4fa3;
+    background-image: url(../../assets/seer.png);
+  }
+  
+  .box-tipo.bug {
+    background-color: #7dbd35;
+    background-image: url(../../assets/bug.png);
+  }
+  
+  .box-tipo.rock {
+    background-color: #b29f75;
+    background-image: url(../../assets/stone.png);
+  }
+  
+  .box-tipo.ghost {
+    background-color: #6e44aa;
+    background-image: url(../../assets/ghost.png);
+  }
+  
+  .box-tipo.dragon {
+    background-color: #4a65e5;
+    background-image: url(../../assets/japan.png);
+  }
+  
+  .box-tipo.dark {
+    background-color: #3d3d3d;
+    background-image: url(../../assets/devil.png);
+  }
+  
+  .box-tipo.steel {
+    background-color: #8fa3b7;
+    background-image: url(../../assets/steel.png);
+  }
+  
+  .box-tipo.fairy { 
+    background-color: #f78cd6;
+    background-image: url(../../assets/magic-wand.png);
+  }
+  
+
+
+
+  /* nomes dos tipo */
+
+  .box-tipo:after {
+    position: absolute;
+    top: 100%;
+    padding: 2px;
+    border-radius: 8px;
+    font-size: 12px;
+    opacity: 0;
+    font-weight: bold;
+  }
+  
+  .box-tipo:hover::after {
+    opacity: 1;
+  }
+
+  .box-tipo.fire::after {
+    content: "Fire";
+  }
+  
+  .box-tipo.water::after {
+    content: "Water";
+  }
+  
+  .box-tipo.electric::after {
+    content: "Electric";
+  }
+  
+  .box-tipo.grass::after {
+    content: "Grass";
+  }
+  
+  .box-tipo.ice::after {
+    content: "Ice";
+  }
+  
+  .box-tipo.fighting::after {
+    content: "Fighting";
+  }
+  
+  .box-tipo.poison::after {
+    content: "Poison";
+  }
+  
+  .box-tipo.ground::after {
+    content: "Ground";
+  }
+  
+  .box-tipo.flying::after {
+    content: "Flying";
+  }
+  
+  .box-tipo.psychic::after {
+    content: "Psychic";
+  }
+  
+  .box-tipo.bug::after {
+    content: "Bug";
+  }
+  
+  .box-tipo.rock::after {
+    content: "Rock";
+  }
+  
+  .box-tipo.ghost::after {
+    content: "Ghost";
+  }
+  
+  .box-tipo.dragon::after {
+    content: "Dragon";
+  }
+  
+  .box-tipo.dark::after {
+    content: "Dark";
+  }
+  
+  .box-tipo.steel::after {
+    content: "Steel";
+  }
+  
+  .box-tipo.fairy::after {
+    content: "Fairy";
+  }
+  
+  .box-tipo.shadow::after {
+    content: "Shadow";
+  }
+  
+  .box-tipo.unknown::after {
+    content: "Unknown";
+  }
+  
