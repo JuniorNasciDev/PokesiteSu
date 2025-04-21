@@ -1,0 +1,58 @@
+
+
+
+.listaFav{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: 520px;
+    margin: auto;
+    list-style: none;
+    overflow: auto;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.listaFav .poke-fav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom:  0.2em;
+    background-color: rgba(255, 0, 0, 0.408);
+    min-height: 100px;
+}
+
+.box-img-poke{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.img-poke{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.pesquisa-fav{
+    width: 80%;
+    margin: auto;
+}
+
+.pesquisa-fav-poke{
+    width: 100%;
+    margin: 0.4em 0em;
+    text-align: center;
+    font-size: 24px;
+    padding: 0.5em;
+}
+
+.box-id-poke{
+    width: 100px;
+}
+
+.box-nome-poke{
+    width: 200px;
+}
+
+

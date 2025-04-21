@@ -5,7 +5,7 @@
     background-color: rgba(255, 255, 255, 0.997);
     position: absolute;
     top: 0;
-    height: 110%;
+    height: 120%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -14,7 +14,7 @@
     padding: 0px 74px;
     border-radius: 10px;
     overflow: hidden;
-    margin-top: -4%;
+    margin-top: -7.3%;
     display: none;
 }
 

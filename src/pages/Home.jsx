@@ -323,23 +323,59 @@ function Home() {
         <ul className="home-lista-btn">
           <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="todos" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="normal" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="fogo" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="agua" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="grama" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="eletrico" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="gelo" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="lutador" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="venenoso" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="terrestre" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="voador" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="psiquico" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="inseto" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="pedra" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="fantasma" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="dragao" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="sombrio" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="aco" />
+          </li>
+          <li className="btn-item">
             <BotaoFiltro funcao={buscarPorTipo} texto="fada" />
           </li>
         </ul>
