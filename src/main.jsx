@@ -8,8 +8,7 @@ import { createBrowserRouter ,RouterProvider } from 'react-router-dom';
 import Home from './pages/home.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
 import Favoriotos from './pages/Favoritos.jsx';
-import Noticias from './pages/Noticias.jsx';
-import Treinadores from './pages/Treinadores.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -21,15 +20,9 @@ const router = createBrowserRouter([
         path:'/',
         element:<Home/>
       },
-      {
-        path:'/noticias',
-        element:<Noticias/>
-      },{
+     {
         path:'/favoritos',
         element:<Favoriotos/>
-      },{
-        path:'/treinadores',
-        element:<Treinadores/>
       }
     ]
   }

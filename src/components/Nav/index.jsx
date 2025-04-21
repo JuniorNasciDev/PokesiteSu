@@ -12,9 +12,7 @@ function Nav(){
             </div>
             <ul className="lista-nav">
                 <Botao texto='Home' rota='/' />
-                <Botao texto='Noticias ' rota='/noticias' />
                 <Botao texto='Favoritos' rota='favoritos'/>
-                <Botao texto='Treinadores' rota='treinadores' />
             </ul>
             <Pesquisa placeholder='Procure Seu Pokemon'/>
         </div>
