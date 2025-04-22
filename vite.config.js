@@ -1,9 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: '/PokesiteSu/',
-  plugins: [react()]
-  
-})
+  build: {
+    outDir: 'public/dist',  // Ou 'dist', se preferir. Este é o diretório de saída
+    emptyOutDir: true       // Certifica-se de que a pasta de saída seja limpa antes de cada build
+  }
+});
