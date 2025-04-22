@@ -1,11 +1,11 @@
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  root: 'public',  // Configura o diretório de entrada como a pasta public
+  plugins: [react()],
+  root: './', // Certifique-se de que está no diretório correto.
   build: {
-    outDir: '../dist', // Define o diretório de saída como 'dist'
-    rollupOptions: {
-      input: '/index.html', // Define o arquivo de entrada
-    },
+    outDir: 'dist',
   },
+  publicDir: 'public',
 });
