@@ -5,9 +5,9 @@ import App from './App.jsx'
 
 import { createBrowserRouter ,RouterProvider } from 'react-router-dom';
 
-import Home from './pages/home.jsx';
+import Home from './pages/Home.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
-import Favoriotos from './pages/Favoritos.jsx';
+import Favoritos from './pages/Favoritos.jsx';
 
 
 const router = createBrowserRouter([
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       },
      {
         path:'/favoritos',
-        element:<Favoriotos/>
+        element:<Favoritos/>
       }
     ]
   }
