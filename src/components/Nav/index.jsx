@@ -1,7 +1,7 @@
 import React from "react";
 import './style.css'
 import logo from '../../assets/logo-navegacao.png'
-import Botao from "../botao";
+import Botao from "../Botao";
 
 
 function Nav(){
