@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import Nav from './components/Nav'
-import Rodape from './components/rodape'
+import Rodape from './components/Rodape'
 
 import { Outlet } from 'react-router-dom'
 
