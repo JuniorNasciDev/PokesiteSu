@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/PokesiteSu/',
+  base: '/PokesiteSu/dist/',
   plugins: [react()]
   
 })
