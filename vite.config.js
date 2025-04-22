@@ -2,7 +2,10 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   build: {
-    outDir: 'public/dist',  // Ou 'dist', se preferir. Este é o diretório de saída
-    emptyOutDir: true       // Certifica-se de que a pasta de saída seja limpa antes de cada build
+    outDir: 'public/dist',  // Diretório de saída para os arquivos compilados
+    emptyOutDir: true,      // Limpa o diretório antes de gerar o novo build
+    rollupOptions: {
+      input: 'public/index.html'  // Certifique-se de que o Vite está construindo a partir de 'public/index.html'
+    }
   }
 });
