@@ -1,21 +1,21 @@
 
 
-.box-tela{
-    width: 106%;
-    background-color: rgba(255, 255, 255, 0.997);
-    position: absolute;
-    top: 0;
-    height: 120%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-sizing: border-box;
-    border: 1px solid black;
-    padding: 0px 74px;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-top: -7.3%;
-    display: none;
+.box-tela {
+  width: 106%;
+  background-color: rgba(255, 255, 255, 0.997);
+  position: absolute;
+  top: 0;
+  height: 120%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: 0px 74px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: -7.3%;
+  display: none;
 }
 
 .fundo{
@@ -611,3 +611,125 @@
     background-image: url(../../assets/magic-wand.png);
   }
   
+  
+  
+  @media (max-width: 768px) {
+    .box-tela {
+        display: flex; /* Flexbox é necessário aqui */
+        width: 100vw;
+        height: 100vh;
+        padding: 1em;
+        margin-top: 0;
+        border-radius: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .fundo {
+        display: none;
+    }
+
+    .box-infoPoke,
+    .box-3dmodel {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1em;
+    }
+
+    .img-poke-p {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin: 1em 0;
+        z-index: 1;
+    }
+
+    .box-info-peso-alt {
+        position: static;
+        width: 100%;
+        margin-top: 10px;
+        justify-content: space-around;
+        font-size: 14px;
+        background-color: rgba(255, 255, 255, 0.497);
+    }
+
+    .box-evolution,
+    .box-stats {
+        width: 100%;
+        margin: 10px 0;
+        background-color: rgba(255, 255, 255, 0.497);
+    }
+
+    .box-evolution {
+        width: 100vw;
+        margin: 0;
+        padding: 0; /* Remover padding extra para não sobrepor */
+        background-color: rgba(255, 255, 255, 0.474);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .box-btn-evolution {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .box-btn-evolution-w {
+        width: calc(50% - 5px); /* Dois botões por linha */
+        box-sizing: border-box;
+    }
+
+    .btn-evolution {
+        width: 100%;
+        height: 60px;
+        font-size: 14px;
+    }
+
+    .nome-poke {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .desc-poke {
+        font-size: 14px;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    .title-evolution,
+    .title-stats,
+    .title-cardin-game {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .close-tela {
+        right: 10px;
+        top: 10px;
+        width: 40px;
+        height: 40px;
+        background-size: cover;
+    }
+
+    .box-card-3d {
+        height: auto;
+    }
+
+    .img-card-poke {
+        height: auto;
+        max-height: 250px;
+    }
+}

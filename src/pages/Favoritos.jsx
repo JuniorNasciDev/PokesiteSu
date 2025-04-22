@@ -62,14 +62,7 @@ function Favoritos() {
     <>
       <h1 className="title-home">Favoritos</h1>
       <p className="text-home">Esses Pokémons são seus escolhidos</p>
-      <div className="pesquisa-fav">
-        <input
-          className="pesquisa-fav-poke"
-          type="text"
-          placeholder="Pesquisar por pokemon favorito"
-        />
-        <div></div>
-      </div>
+      
       <ul className="listaFav">
         {listaFavo.map((pokemon) => (
           <li className="poke-fav" key={pokemon.id}>

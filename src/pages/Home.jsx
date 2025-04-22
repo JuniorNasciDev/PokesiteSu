@@ -13,10 +13,10 @@ function Home() {
   const [descPoke, setDescPoke] = useState("lorem ipsum");
   const [tipoP, setTipoP] = useState("teste");
   const [tipoS, setTipoS] = useState("teste");
-  const [imgPoke, setImgPoke] = useState("");
+  const [imgPoke, setImgPoke] = useState("https://cdn.pixabay.com/photo/2012/04/12/20/12/x-30465_960_720.png");
   const [evolution, setEvolution] = useState("teste");
   const [evolution2, setEvolution2] = useState("teste");
-  const [cardGame, setCardGame] = useState("");
+  const [cardGame, setCardGame] = useState("https://cdn.pixabay.com/photo/2012/04/12/20/12/x-30465_960_720.png");
   const [habitat, setHabitat] = useState("none");
   const [evolutionIMG, setEvolutionIMG] = useState("teste");
   const [evolutionIMG2, setEvolutionIMG2] = useState("teste");
@@ -27,24 +27,27 @@ function Home() {
   const [exp, setExp] = useState("0");
   const [peso, setPeso] = useState("0");
   const [altura, setAltura] = useState("0");
-  const listapoketeste= useState(`https://pokeapi.co/api/v2/pokemon?limit=${listaPoke}&offset=${posicao}`);
-  const [tipoSelecionado, setTipoSelecionado] = useState('all');
-
+  const listapoketeste = useState(
+    `https://pokeapi.co/api/v2/pokemon?limit=${listaPoke}&offset=${posicao}`
+  );
+  const [tipoSelecionado, setTipoSelecionado] = useState("all");
 
   const proximaPagina = () => setPosicao((prev) => prev + listaPoke);
   const paginaAnterior = () => {
-  if (posicao >= listaPoke) setPosicao((prev) => prev - listaPoke);
-};
+    if (posicao >= listaPoke) setPosicao((prev) => prev - listaPoke);
+  };
 
   useEffect(() => {
     async function fetchPokemon() {
       try {
         let listaFinal = [];
-  
-        if (tipoSelecionado !== 'all') {
-          const response = await fetch(`https://pokeapi.co/api/v2/type/${tipoSelecionado}`);
+
+        if (tipoSelecionado !== "all") {
+          const response = await fetch(
+            `https://pokeapi.co/api/v2/type/${tipoSelecionado}`
+          );
           const data = await response.json();
-  
+
           const pokemonsTipo = data.pokemon.slice(posicao, posicao + listaPoke);
           listaFinal = await Promise.all(
             pokemonsTipo.map(async (entry) => {
@@ -53,9 +56,11 @@ function Home() {
             })
           );
         } else {
-          const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${listaPoke}&offset=${posicao}`);
+          const response = await fetch(
+            `https://pokeapi.co/api/v2/pokemon?limit=${listaPoke}&offset=${posicao}`
+          );
           const data = await response.json();
-  
+
           listaFinal = await Promise.all(
             data.results.map(async (pokemon) => {
               const res = await fetch(pokemon.url);
@@ -63,20 +68,20 @@ function Home() {
             })
           );
         }
-  
+
         setPokemons(listaFinal);
       } catch (error) {
         console.error("Erro ao buscar Pokémon:", error);
       }
     }
-  
+
     fetchPokemon();
-  }, [tipoSelecionado, posicao]);
+  }, [tipoSelecionado, posicao, listaPoke]);
 
   useEffect(() => {
     function atualizarTamanhoLista() {
       const largura = window.innerWidth;
-
+  
       if (largura < 868) {
         setListaPoke(2);
       } else if (largura < 1128) {
@@ -86,16 +91,14 @@ function Home() {
       } else {
         setListaPoke(8);
       }
+    
     }
+  
+    atualizarTamanhoLista(); // Executa uma única vez ao montar
+  
+  }, []);
 
-    window.addEventListener("resize", atualizarTamanhoLista);
-    atualizarTamanhoLista();
-
-    return () => {
-      window.removeEventListener("resize", atualizarTamanhoLista);
-    };
-  }, [listapoketeste]);
-
+  
   const fetchDescricaoPoke = async (nome) => {
     try {
       const response = await fetch(
@@ -206,8 +209,8 @@ function Home() {
     setTipoP(pokeSelecionado.types[0]?.type.name || "desconhecido");
     setTipoS(pokeSelecionado.types[1]?.type.name || "");
     setImgPoke(
-      pokeSelecionado.sprites.other["official-artwork"].front_default ||
-        pokeSelecionado.sprites.front_default
+      pokeSelecionado.sprites?.other?.["official-artwork"]?.front_default ||
+        pokeSelecionado.sprites?.front_default
     );
     setHP(pokeSelecionado.stats[0].base_stat);
     setAtk(pokeSelecionado.stats[1].base_stat);
@@ -267,7 +270,6 @@ function Home() {
         if (event.target.id === botao.id) {
           const pokeSelecionado = pokemons[indice];
           setNomePoke(pokeSelecionado.name);
-
           const descricao = await fetchDescricaoPoke(pokeSelecionado.name);
           setDescPoke(descricao);
           setTipoP(pokeSelecionado.types[0]?.type.name || "desconhecido");
@@ -315,6 +317,10 @@ function Home() {
     if (tela) tela.style.display = "flex";
   };
 
+
+
+ 
+ 
   return (
     <>
       <h1 className="title-home">Pokedex</h1>

@@ -1,27 +1,97 @@
-
-
-.nav-box{
+.nav-box {
     width: 100%;
     padding: 0px 64px;
     background-color: var(--fundo-navegacao);
 
     display: flex;
     justify-content: space-between;
-    align-items: center ;
-
+    align-items: center;
+    box-sizing: border-box;
 }
 
-.box-logo{
+.box-logo {
     width: 20%;
-    text-align: center;  
+    text-align: center;
 }
-.logo-nav{
+
+.logo-nav {
     width: 12.25rem;
 }
 
-.lista-nav{
+.lista-nav {
     display: flex;
     justify-content: space-around;
     flex-grow: 1;
     max-width: 500px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .nav-box {
+        padding: 0px 32px; /* Diminui o padding em telas menores */
+    }
+
+    .box-logo {
+        width: 25%; /* Logo ocupa mais espaço em telas menores */
+    }
+
+    .logo-nav {
+        width: 10rem; /* Ajusta o tamanho do logo */
+    }
+
+    .lista-nav {
+        max-width: 350px; /* Ajusta a largura da lista de navegação */
+        justify-content: space-between; /* Ajusta o espaçamento */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-box {
+        flex-direction: column; /* Empilha os itens em telas pequenas */
+        padding: 0px 16px; /* Reduz o padding em telas menores */
+    }
+
+    .box-logo {
+        width: 100%; /* A logo ocupa toda a largura disponível */
+        margin-bottom: 10px; /* Adiciona espaço entre logo e lista */
+    }
+
+    .logo-nav {
+        width: 8rem; /* Ajusta ainda mais o logo */
+    }
+
+    .lista-nav {
+        width: 100%; /* A lista de navegação ocupa toda a largura disponível */
+        flex-direction: column; /* Empilha os itens da lista verticalmente */
+        justify-content: center;
+    }
+
+    .lista-nav a {
+        padding: 10px 0; /* Aumenta o espaçamento entre os links */
+        text-align: center; /* Centraliza os links */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-box {
+        padding: 0px 8px; /* Menor padding em telas muito pequenas */
+    }
+
+    .box-logo {
+        width: 100%; /* Logo ocupa toda a largura */
+    }
+
+    .logo-nav {
+        width: 7rem; /* Logo menor em telas pequenas */
+    }
+
+    .lista-nav {
+        width: 100%; /* Lista de navegação ocupa toda a largura */
+        flex-direction: column; /* Lista empilhada */
+    }
+
+    .lista-nav a {
+        padding: 8px 0; /* Ajusta o padding para telas muito pequenas */
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
 }

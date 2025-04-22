@@ -1,28 +1,73 @@
-
-
-.box-rodape{
+.box-rodape {
     display: flex;
     width: 100%;
     justify-content: center;
     flex-direction: row;
     border: 1px solid #6441a565;
     margin-top: 19px;
-    bottom: 0px;
-    position: absolute;
-}
-
-.lista-rodape{
+    position: relative; /* Alterado para relative */
+    bottom: 0;
+    margin-top: 20px; /* Ajuste para garantir um bom espaçamento */
+    padding: 20px 0; /* Adiciona um espaçamento interno */
+    background-color: #fff;
+  }
+  
+  .lista-rodape {
     margin-top: -19px;
     background-color: white;
     padding: 5px 10px;
     display: flex;
     list-style: none;
     justify-content: space-around;
-}
-.item-rodape{
+    width: 100%; /* Garante que ocupe toda a largura disponível */
+  }
+  
+  .item-rodape {
     margin: 0px 16px;
-}
-
-a{
+  }
+  
+  a {
     text-decoration: none;
-}
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    /* Ajuste no box do rodapé para telas menores */
+    .box-rodape {
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+      padding: 10px 0;
+      margin-top: 0;
+    }
+  
+    /* Ajuste na lista do rodapé para telas menores */
+    .lista-rodape {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    /* Ajuste nos itens do rodapé para telas menores */
+    .item-rodape {
+      margin: 8px 0;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .box-rodape {
+      position: relative; /* Mudado para relative para evitar sobreposição */
+      bottom: 0;
+    }
+  
+    .lista-rodape {
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    .item-rodape {
+      margin: 0px 16px;
+    }
+  }
+  

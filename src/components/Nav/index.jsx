@@ -2,7 +2,7 @@ import React from "react";
 import './style.css'
 import logo from '../../assets/logo-navegacao.png'
 import Botao from "../botao";
-import Pesquisa from "../pesquisa";
+
 
 function Nav(){
     return(
@@ -14,7 +14,7 @@ function Nav(){
                 <Botao texto='Home' rota='/' />
                 <Botao texto='Favoritos' rota='favoritos'/>
             </ul>
-            <Pesquisa placeholder='Procure Seu Pokemon'/>
+           
         </div>
     )
 }
