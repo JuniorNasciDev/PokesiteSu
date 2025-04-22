@@ -1,9 +1,11 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/',
+  root: 'public',  // Configura o diretório de entrada como a pasta public
   build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
+    outDir: '../dist', // Define o diretório de saída como 'dist'
+    rollupOptions: {
+      input: '/index.html', // Define o arquivo de entrada
+    },
   },
 });

@@ -1,23 +1,12 @@
 {
-  "version": 2,
   "builds": [
     {
-     "src": "vite.config.js",
+      "src": "vite.config.js",
       "use": "@vercel/node"
     },
     {
-      "src": "src/**/*",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/favicon.ico",
-      "dest": "/public/favicon.ico"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "src": "public/**/*",
+      "use": "@vercel/static"
     }
   ]
 }
