@@ -5,7 +5,7 @@ import App from './App.jsx'
 
 import { createBrowserRouter ,RouterProvider } from 'react-router-dom';
 
-import Home from './pages/Home.jsx';
+import Home from "./pages/Home.jsx"
 import ErrorPage from './pages/ErrorPage.jsx';
 import Favoritos from './pages/Favoritos.jsx';
 
